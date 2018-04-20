@@ -67,14 +67,18 @@ class MenuController
 
   def view_entry_number_n
     print "Entry Number: "
-    selection = gets.chomp
+    selection = gets.chomp.to_i
 
     if selection < @address_book.entries.count
       puts @address_book.entries[selection]
+      puts "Press enter to return to main menu"
+      gets.chomp
+      system "clear"
 
     else
       puts "#{selection} is not a valid entry number"
       view_entry_number_n
+      system "clear"
     end
   end
 
