@@ -18,6 +18,10 @@ class AddressBook
        @entries.delete(delete_entry)
      end
 
+     def demolish_entries
+       @entries = []
+     end
+
 
   def add_entry(name, phone_number, email)
 
